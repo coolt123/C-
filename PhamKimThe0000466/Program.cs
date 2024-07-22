@@ -20,7 +20,10 @@ namespace PhamKimThe0000466
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("Mydb"));
             });
+            builder.Services.AddScoped<IDoanhNghiepService0000466, DoanhNghiepService0000466>();
+            builder.Services.AddScoped<ISanPhamDoanhNghiep0000466, SanPhamDoanhNghiep0000466>();
             var app = builder.Build();
+            
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
